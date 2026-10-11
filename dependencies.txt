@@ -1,0 +1,21 @@
+Database- isa_3
+
+
+BACKEND
+
+cd backend
+npm init -y
+npm install express mysql2 sequelize cors
+
+-To Execute Backend-
+node server.js
+
+
+FRONTEND
+
+npm create vite@latest frontend -- --template react
+cd frontend
+npm install axios react-router-dom
+
+-To Execute Frontend-
+npm run dev

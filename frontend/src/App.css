@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* =========================================================
+   1. TRANSLUCENT TOP NAVBAR
+   ========================================================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+  color: #ffffff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-btn {
+  background: rgba(37, 99, 235, 0.6) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(96, 165, 250, 0.35) !important;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(37, 99, 235, 0.85) !important;
+  border-color: rgba(96, 165, 250, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   2. HOME PAGE HERO & STATS
+   ========================================================= */
+.home-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 20px 40px 20px; /* 100px top padding accounts for fixed navbar */
+  background-color: #0f172a;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('/campus.jpeg'); /* Ensure this filename matches your file in public/ */
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Translucent Main Hero Card */
+.hero-text-card {
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.hero-text-card h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-text-card p {
+  margin: 0 auto 20px auto;
+  color: #e2e8f0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Translucent Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card h3 {
+  margin: 6px 0 0 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* =========================================================
+   3. TRANSLUCENT BUTTONS
+   ========================================================= */
+.btn {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Check All Students - Blue Frosted */
+.btn-primary {
+  background: rgba(37, 99, 235, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  background: rgba(37, 99, 235, 0.85);
+  border-color: rgba(96, 165, 250, 0.7);
+  transform: translateY(-1px);
+}
+
+/* Add New Student / Secondary - White Frosted */
+.btn-light {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Action buttons on student cards */
+.btn-view {
+  flex: 1;
+  background: rgba(14, 165, 233, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #7dd3fc;
+}
+
+.btn-view:hover {
+  background: rgba(14, 165, 233, 0.35);
+}
+
+.btn-edit {
+  flex: 1;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fde047;
+}
+
+.btn-edit:hover {
+  background: rgba(245, 158, 11, 0.35);
+}
+
+.btn-delete {
+  flex: 1;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: #fca5a5;
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.35);
+}
+
+/* =========================================================
+   4. FULL-SCREEN RECORDS DIRECTORY (VIEW STUDENTS)
+   ========================================================= */
+.records-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 30px 60px 30px;
+  background-color: #0f172a;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/student.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.records-header h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.records-header p {
+  color: #cbd5e1;
+  margin: 6px 0 0 0;
+  font-size: 14px;
+}
+
+.records-count-badge {
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Translucent Student Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.student-card {
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.student-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(37, 99, 235, 0.35);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  color: #93c5fd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.student-card p {
+  color: #cbd5e1 !important;
+}
+
+.student-card p strong {
+  color: #ffffff;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* =========================================================
+   5. TRANSLUCENT ADD / EDIT FORMS & DETAILS PAGE
+   ========================================================= */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 20px 40px 20px;
+}
+
+.box-panel {
+  max-width: 500px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.box-panel h2 {
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.detail-row span {
+  color: #94a3b8;
+}
+
+.detail-row strong {
+  color: #ffffff;
+}
